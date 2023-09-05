@@ -38,7 +38,7 @@ export const AddProducts = () => {
     onSubmit: (values) => {
       const id = Math.floor(Math.random() * Date.now());
       dispatch(addProduct({ ...values, id }));
-      navigate('/');
+      navigate('/test-task/');
     },
   });
 

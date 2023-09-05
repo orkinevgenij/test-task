@@ -50,7 +50,7 @@ export const UpdateProduct = () => {
           category: values?.category,
         }),
       );
-      navigate('/');
+      navigate('/test-task/');
     },
   });
 
