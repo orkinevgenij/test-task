@@ -1,24 +1,32 @@
-import logo from './logo.svg';
+import { useEffect, useState } from 'react';
 import './App.css';
+import { Route, Routes } from 'react-router-dom';
+import HomePage from './pages/HomePage';
+import { NavBar } from './components/NavBar';
+import { Layout } from './components/Layout';
+import { AddProducts } from './pages/AddProducts';
+import { useDispatch, useSelector } from 'react-redux';
 
+import { UpdateProduct } from './pages/UpdateProduct';
+import { fetchProducts } from './redux/slices/productSlice';
 function App() {
+  const dispatch = useDispatch();
+  const { productCategories, products, searchProducts } = useSelector((state) => state.product);
+
+  useEffect(() => {
+    dispatch(fetchProducts());
+  }, []);
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <NavBar />
+      <Routes>
+        <Route path='' element={<Layout />}>
+          <Route path='/' element={<HomePage products={products} />} />
+          <Route path='/product-update/:id' element={<UpdateProduct />} />
+          <Route path='/add-products' element={<AddProducts />} />
+        </Route>
+      </Routes>
+    </>
   );
 }
 
