@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/http//://orkinevgenij.github.io/test-task/static/css/main.c9e9012d.css",
+    "main.js": "/http//://orkinevgenij.github.io/test-task/static/js/main.f3a6cc5f.js",
+    "index.html": "/http//://orkinevgenij.github.io/test-task/index.html",
+    "main.c9e9012d.css.map": "/http//://orkinevgenij.github.io/test-task/static/css/main.c9e9012d.css.map",
+    "main.f3a6cc5f.js.map": "/http//://orkinevgenij.github.io/test-task/static/js/main.f3a6cc5f.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.c9e9012d.css",
+    "static/js/main.f3a6cc5f.js"
+  ]
+}
