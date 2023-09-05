@@ -17,7 +17,7 @@ import { filteredProducts } from '../redux/slices/productSlice';
 
 const pages = [
   {
-    path: '/',
+    path: '/test-task/',
     name: 'Домашня',
   },
   {
