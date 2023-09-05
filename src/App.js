@@ -21,7 +21,7 @@ function App() {
       <NavBar />
       <Routes>
         <Route path='' element={<Layout />}>
-          <Route path='/' element={<HomePage products={products} />} />
+          <Route path='/test-task/' element={<HomePage products={products} />} />
           <Route path='/product-update/:id' element={<UpdateProduct />} />
           <Route path='/add-products' element={<AddProducts />} />
         </Route>
